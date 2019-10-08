@@ -59,10 +59,9 @@ def calculator(input_string)
 end
 
 def fsm(current_state, char)
-  states = fsm_definition
-  if states[current_state]
-    if states[current_state][:transitions][char.to_sym]
-      next_state = states[current_state][:transitions][char.to_sym]
+  if fsm_definition[current_state]
+    if fsm_definition[current_state][:transitions][char.to_sym]
+      next_state = fsm_definition[current_state][:transitions][char.to_sym]
     else
       raise StandardError, "Invalid Input"
     end
