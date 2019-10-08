@@ -31,7 +31,7 @@ def fsm_definition
     },
   }
 end
-å
+
 def calculator(input_string)
   initial = nil
   fsm_definition.each do |name, hash|
